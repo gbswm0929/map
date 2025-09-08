@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def get_index():
-    return render_template("main.html")
+    # return render_template("main.html")
+    return "asdf"
 
 if __name__ == "__main__":
     app.run()
