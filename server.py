@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request
-import datetime
+import os
 
 app = Flask(__name__)
 
 @app.route("/")
 def get_index():
-    return render_template("main.html")
+    return render_template("main.html", key = os.getenv("key"))
 
 if __name__ == "__main__":
     app.run()
+# d2ce325c4f56d90600fd19b141bd18a2
