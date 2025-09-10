@@ -22,6 +22,9 @@ def apimap():
     except requests.exceptions.RequestException as e:
         print("/apis/map error : ", e)
         return
+@app.route("/hi")
+def hello():
+    return "hi"
         
 
 if __name__ == "__main__":
