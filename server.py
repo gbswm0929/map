@@ -8,8 +8,8 @@ load_dotenv()
 
 @app.route("/")
 def get_index():
+    return render_template("maincopy.html")
     # return render_template("main.html")
-    return render_template("main copy.html")
 @app.route("/apis/map")
 def apimap():
     try:
