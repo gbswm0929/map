@@ -18,13 +18,13 @@ def apimap():
         if response.ok:
             return Response(response.text, mimetype="application/javascripts")
         else:
-            return
+            return ''
     except requests.exceptions.RequestException as e:
         print("/apis/map error : ", e)
-        return
+        return ''
 @app.route("/hi")
 def hello():
-    return "hi"
+    return "hii"
         
 
 if __name__ == "__main__":
