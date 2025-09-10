@@ -13,7 +13,7 @@ def get_index():
 @app.route("/apis/map")
 def apimap():
     try:
-        response = requests.get(f"https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey={os.getenv("apismap")}&libraries=services")
+        response = requests.get(f"https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey={os.getenv("key")}&libraries=services")
         response.raise_for_status()
         if response.ok:
             return Response(response.text, mimetype="application/javascripts")
