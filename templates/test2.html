@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurred Div Example</title>
+    <style>
+        /* 전체 페이지를 꽉 채운 배경 이미지 */
+        .background-image {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://i.namu.wiki/i/v8yNjB16ijFF3ZhPgBhsBHfvcXIXvzz-C-Zi3d1UZM657ALY1seeeUrfhqS_qMEWGdS6WJbPDFtGa0KhvbKEsg.webp'); /* 여기에 원하는 이미지 URL 입력 */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 블러 처리된 div */
+        .blurred-div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px); /* 블러 효과 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image">
+    <div class="blurred-div">
+        이 텍스트는 블러 처리된 배경 위에 있습니다!
+    </div>
+</div>
+
+</body>
+</html>

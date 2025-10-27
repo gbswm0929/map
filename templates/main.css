@@ -1,0 +1,244 @@
+:root {
+    --main : #39B74A;
+    --white : #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.index {
+    z-index: 2;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+}
+
+.blur {
+    /* filter: blur(5px); */
+    backdrop-filter: blur(5px);
+}
+
+#watting {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    top: 0;
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+}
+
+#bus, #train {
+    transition: transform 1s ease;
+}
+
+.show {
+    transform: scaleY(1);
+}
+
+.unshow {
+    transform: scaleY(2.1);
+}
+
+.disabled {
+    display: none !important;
+}
+
+.boxsizing {
+    box-sizing: border-box
+}
+
+.borderradius-5 {
+    border-radius: 5px;
+}
+
+.borderradius-10 {
+    border-radius: 10px;
+}
+
+
+
+#search {
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    width: 250px;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    justify-items: center;
+}
+
+#searchbar {
+    position: fixed;
+    top: 10px;
+    width: 230px;
+    height: 30px;
+    border: 1px solid var(--main);
+    background-color: white;
+}
+
+#searchinput {
+    outline: none;
+    width: 200px;
+    height: 100%;
+    margin: 0 0 0 5px;
+    color: #333333;
+}
+
+#searchinput::placeholder {
+    color: #555555;
+}
+
+#searchbutton {
+    width: 15px;
+    height: 15px;
+    right: 0;
+    vertical-align: middle;
+}
+
+#searchbutton::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: gray;
+    position: absolute;
+    top: 4px;
+    right: 10%;
+}
+
+/* #searchbutton::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 1px;
+    height: 20px;
+    margin: 0 -5px 0 0;
+    background-color: red;
+} */
+
+#searchbutton:hover {
+    cursor: pointer;
+}
+
+#searchinput, #searchbutton {
+    border: none;
+    background-color: transparent;
+}
+
+#menu_wrap {
+    position: fixed;
+    top: 62px;
+    width: 220px;
+    height: 85%;
+}
+
+#placesList {
+    list-style: none;
+    height: 100%;
+    overflow-y: auto;
+    justify-items: center;
+    scrollbar-width: none;
+}
+
+.item {
+    width: 210px;
+    height: 70px;
+    border: 1px solid transparent;
+    background-image: linear-gradient(var(--white), var(--white)), linear-gradient(to right, var(--white) 0%, var(--main) 50%,   var(--white) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin: 0 0 10px;
+    transition: height 0.3s ease;
+}
+
+.item:hover {
+    height: 100px;
+    background-image: linear-gradient(var(--white), var(--white)), linear-gradient(to right, var(--white) 0%, var(--main) 30%, var(--main) 70%,   var(--white) 100%);
+}
+
+.pn {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.juso {
+    display: block;
+    font-size: 13px;
+    color: gray;
+}
+
+.doromyeong::before {
+    content: "도로명: ";
+}
+
+.jibun::before {
+    content: "지번: ";
+}
+
+.doromyeong::before, .jibun::before {
+    font-size: 10px;
+}
+
+#pagination {
+    display: inline-block;
+    text-align: center;
+}
+
+#searchmessage {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    align-content: center;
+}
+
+#line {
+    position: absolute;
+    top: 28px;
+    width: 500px;
+    height: 30px;
+    left: 506px;
+    text-align: center;
+}
+
+#start, #end {
+    display: inline-block;
+    height: 20px;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+#start::before, #end::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--main);
+}
+
+#startlocation, #endlocation {
+    margin: 0 10px;
+    color: var(--white);
+}
