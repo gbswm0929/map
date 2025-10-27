@@ -8,6 +8,9 @@ load_dotenv()
 @app.route("/")
 def get_index():
     return render_template("main.html", key=os.getenv("key"))
+@app.route("/hi")
+def get_index():
+    return "hi"
 
 if __name__ == "__main__":
     app.run()
